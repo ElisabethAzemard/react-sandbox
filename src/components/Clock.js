@@ -24,7 +24,7 @@ class Clock extends Component {
     }
 
     tick() {
-        this.setState( (prevState) => { date: new Date() } );
+        this.setState( (prevState) => ({ date: new Date() }) ); // parentheses make the function return what's inside the expression
     }
 }
 

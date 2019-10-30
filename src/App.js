@@ -1,5 +1,6 @@
 import React from 'react';
 import Clock from './components/Clock';
+import Counter from './components/Counter';
 
 function Bienvenue(props) {
   return (
@@ -44,6 +45,7 @@ function App() {
       <Add a={483} b={1928}/>
       <AddSuite start={1} end={10}/> */}
       <Clock/>
+      <Counter/>
     </div>
   );
 }
