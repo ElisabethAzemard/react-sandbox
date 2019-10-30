@@ -1,6 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Clock from './components/Clock';
 
 function Bienvenue(props) {
   return (
@@ -39,11 +38,12 @@ const AddSuite = (props) => {
 function App() {
   return (
     <div>
-      <Bienvenue nom="Elisabeth"/>
+      {/* <Bienvenue nom="Elisabeth"/>
       <Add a={5} b={8}/>
       <Add a={2} b={1229}/>
       <Add a={483} b={1928}/>
-      <AddSuite start={1} end={10}/>
+      <AddSuite start={1} end={10}/> */}
+      <Clock/>
     </div>
   );
 }
