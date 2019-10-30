@@ -9,13 +9,23 @@ class Counter extends Component {
         };
     }
 
-    count = () => {
+    counterAdd = () => {
         this.setState( (prevState) => ({ counter: prevState.counter + 1 }) );
+    }
+
+    counterRemove = () => {
+        if ( this.state.counter > 0 ) {
+            this.setState( (prevState) => ({ counter: prevState.counter - 1 }) );
+        }
     }
 
     render() {
         return (
-            <button onClick={ this.count }>You clicked me { this.state.counter } time(s)</button>
+            <div>
+                <button onClick={ this.counterRemove }>-</button>
+                <span>{ this.state.counter }</span>
+                <button onClick={this.counterAdd }>+</button>
+            </div>
         )
     }
 
