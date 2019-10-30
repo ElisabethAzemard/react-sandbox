@@ -1,6 +1,7 @@
 import React from 'react';
 import Clock from './components/Clock';
 import Counter from './components/Counter';
+import Timer from './components/Timer';
 
 function Bienvenue(props) {
   return (
@@ -46,6 +47,7 @@ function App() {
       <AddSuite start={1} end={10}/> */}
       <Clock/>
       <Counter/>
+      <Timer label="Pâtes" time="5"/>
     </div>
   );
 }
