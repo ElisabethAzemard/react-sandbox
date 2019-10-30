@@ -19,6 +19,23 @@ const Add = (props) => {
   );
 };
 
+
+// créer un composant fonctionnel qui affiche
+// la somme des nombres de 1 à 10
+
+const AddSuite = (props) => {
+  let { start, end } = props;
+  let total = 0;
+
+  for(let step = start; step <= end; step++) {
+    total += step;
+  };
+
+  return (
+    <p>La somme des nombres de {start} à {end} est de {total}</p>
+  )
+}
+
 function App() {
   return (
     <div>
@@ -26,6 +43,7 @@ function App() {
       <Add a={5} b={8}/>
       <Add a={2} b={1229}/>
       <Add a={483} b={1928}/>
+      <AddSuite start={1} end={10}/>
     </div>
   );
 }
