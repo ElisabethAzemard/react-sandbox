@@ -9,22 +9,16 @@ class Counter extends Component {
         };
     }
 
-    counterAdd = () => {
-        this.setState( (prevState) => ({ counter: prevState.counter + 1 }) );
-    }
-
-    counterRemove = () => {
-        if ( this.state.counter > 0 ) {
-            this.setState( (prevState) => ({ counter: prevState.counter - 1 }) );
-        }
+    handleClick = (step) => {
+        this.setState( (prevState) => ({ counter: prevState.counter + step }) );
     }
 
     render() {
         return (
             <div>
-                <button onClick={ this.counterRemove }>-</button>
+                <button onClick={ () => this.handleClick(-1) }>-</button>
                 <span>{ this.state.counter }</span>
-                <button onClick={this.counterAdd }>+</button>
+                <button onClick={ () => this.handleClick(1) }>+</button>
             </div>
         )
     }
